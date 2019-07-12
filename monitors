@@ -1,0 +1,2 @@
+To put laptop output to the right of VGA output:
+xrandr --output eDP-1 --right-of DP-2

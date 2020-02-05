@@ -12,6 +12,8 @@ Plug 'lervag/vimtex' " General latex plugin
 " let g:vimtex_view_general_options_latexmk = '--unique'
 " use zathura
 let g:vimtex_view_method='zathura'
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 Plug 'tpope/vim-fugitive' " git integration
 
@@ -28,8 +30,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " place for custom snippets
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]

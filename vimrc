@@ -15,9 +15,13 @@ let g:vimtex_view_method='zathura'
 
 Plug 'tpope/vim-fugitive' " git integration
 
+Plug 'tpope/vim-surround' " parenthesizing
+
 Plug 'ludovicchabant/vim-gutentags' " tag management
 
 Plug 'lithammer/vim-eighties' " colorscheme
+
+Plug 'JuliaEditorSupport/julia-vim' " Julia support
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -26,6 +30,10 @@ Plug 'honza/vim-snippets'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" place for custom snippets
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]
+
 
 call plug#end()
 

@@ -34,7 +34,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " place for custom snippets
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "/home/cmcs/.vim/my-snippets/ultisnips"]
 
 
 call plug#end()

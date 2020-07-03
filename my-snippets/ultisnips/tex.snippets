@@ -1,16 +1,66 @@
 # Aligned equation
 snippet al "Aligned equation environment, unnumbered" b
 \begin{align*}
-    ${0:${VISUAL}}
+  ${0:${VISUAL}}
 \end{align*}
 endsnippet
 
 snippet dm "Display math" wA
 \[
-    $1
+  $1
 \]$0
 endsnippet
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+  snip.rv = ' '
+else:
+  snip.rv = ''
+`$2
+endsnippet
+
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+snippet td "superscript" iA
+^{$1}$0
+endsnippet
+
+snippet sd "subscript" iA
+_{$1}$0
+endsnippet
+
+snippet // "fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
 	
-snippet ts "Tensor product symbol" w
-\otimes
+
+snippet vc "vector" wA
+\\vec
+endsnippet
+
+snippet cal "mathcal environment" wA
+\\mathcal{$1}$0
+endsnippet
+
+snippet bar "overline environment" wA
+\\overline{$1}$0
+endsnippet
+
+snippet ts "tensor product symbol" wA
+\\otimes
+endsnippet
+
+snippet dots "lower dots" wA
+\\dots
+endsnippet
+
+snippet cdots "center dots" wA
+\cdots
 endsnippet

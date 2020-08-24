@@ -3,6 +3,9 @@ call plug#begin('~/.vim/plugged') " Plugin directory
 
 Plug 'lervag/vimtex' " General latex plugin
 
+"default tex flavor
+let g:tex_flavor = 'latex'
+
 "viewer settings
 
 "here are the recommended settings for okular.

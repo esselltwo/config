@@ -1,8 +1,20 @@
+# text emphasis
+snippet em "Emphasis" w
+\emph{$1}$0
+endsnippet
+
 # Aligned equation
 snippet al "Aligned equation environment, unnumbered" b
 \begin{align*}
   ${0:${VISUAL}}
 \end{align*}
+endsnippet
+
+# Arrays
+snippet ar "Array environment" b
+\begin{array}{$1}
+  $2
+\end{array}
 endsnippet
 
 snippet dm "Display math" wA
@@ -45,11 +57,11 @@ snippet vc "vector" wA
 \\vec
 endsnippet
 
-snippet cal "mathcal environment" wA
+snippet cal "mathcal environment" w
 \\mathcal{$1}$0
 endsnippet
 
-snippet bar "overline environment" wA
+snippet bar "overline environment" w
 \\overline{$1}$0
 endsnippet
 

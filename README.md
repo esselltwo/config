@@ -10,3 +10,5 @@ Where things go:
 
 Other software required:
 * Brightness control uses (light)[https://github.com/haikarainen/light#debianr] because xbacklight wasn't working.
+
+Background image from http://bulatov.org/math/180110/ 

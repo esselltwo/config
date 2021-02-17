@@ -17,6 +17,12 @@ let g:tex_flavor = 'latex'
 let g:vimtex_view_method='zathura'
 set conceallevel=1
 let g:tex_conceal='abdmg'
+" ignore some very common errors
+let g:vimtex_quickfix_ignore_filters = [
+            \ 'Marginpar on page',
+            \ 'Overfull \\hbox',
+            \ 'Underfull \\hbox',
+            \]
 
 Plug 'tpope/vim-fugitive' " git integration
 

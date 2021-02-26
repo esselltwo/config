@@ -1,3 +1,8 @@
+" Spell checking
+set spelllang=en
+set spellfile=$HOME/my-config/en.utf-8.add
+set spell
+
 " Plugins go here
 call plug#begin('~/.vim/plugged') " Plugin directory 
 

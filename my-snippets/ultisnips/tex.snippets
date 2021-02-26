@@ -1,6 +1,11 @@
 # text emphasis
 snippet em "Emphasis" w
-\emph{$1}$0
+\emph{${1:${VISUAL}}}$0
+endsnippet
+
+# text definition-emphasis
+snippet dem "Definition emphasis" w
+\defemph{${1:${VISUAL}}}$0
 endsnippet
 
 # Aligned equation
@@ -58,15 +63,19 @@ snippet vc "vector" wA
 endsnippet
 
 snippet cal "mathcal environment" w
-\\mathcal{$1}$0
+\\mathcal{${1:${VISUAL}}}$0
 endsnippet
 
 snippet bar "overline environment" w
-\\overline{$1}$0
+\\overline{${1:${VISUAL}}}$0
 endsnippet
 
 snippet ts "tensor product symbol" wA
 \\otimes
+endsnippet
+
+snippet bts "box product symbol" wA
+\\boxtimes
 endsnippet
 
 snippet dots "lower dots" wA

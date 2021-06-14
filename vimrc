@@ -69,6 +69,9 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" .cls are LaTeX files
+autocmd BufNewFile,BufRead *.cls set syntax=tex
+
 " use fewer spaces in some types
 " (la)tex
 autocmd Filetype tex setlocal softtabstop=2

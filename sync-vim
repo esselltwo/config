@@ -1,0 +1,2 @@
+cp vimrc $HOME/.vimrc
+cp -r my-snippets $HOME/.vim/

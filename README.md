@@ -12,3 +12,8 @@ Other software required:
 * Brightness control uses (light)[https://github.com/haikarainen/light#debianr] because xbacklight wasn't working.
 
 Background image from http://bulatov.org/math/180110/ 
+
+## Warning
+The polybar config uses the (siji)[https://github.com/stark/siji] fonts.
+For some reason the install script is messed up: if you are installing it (maybe only on a clean system?) you need to remove `/etc/fonts/conf.d/70-no-bitmaps.conf` and then run `fc-cache -rv` to regenerate the font cache.
+This is detailed (here)[https://github.com/stark/siji/issues/28].

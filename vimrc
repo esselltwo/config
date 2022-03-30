@@ -92,8 +92,8 @@ set wildmenu
 " show partial commands
 set showcmd
 
-" highligh searches
-set hlsearch
+" highlight searches
+" set hlsearch
 
 set cmdheight=2
 set number

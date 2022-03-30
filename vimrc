@@ -44,7 +44,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="jk"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " place for custom snippets

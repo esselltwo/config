@@ -1,3 +1,14 @@
+# include this code block at the top of a *.snippets file...
+# ----------------------------- #
+global !p
+def math():
+  return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+# ----------------------------- #
+# ...then place 'context "math()"' above any snippets you want to expand only in math mode
+# see https://ejmastnak.github.io/tutorials/vim-latex/ultisnips.html#subjective-practical-tips-for-fast-editing
+
+
 # text emphasis
 snippet em "Emphasis" w
 \emph{${1:${VISUAL}}}$0
@@ -56,10 +67,14 @@ endsnippet
 snippet // "fraction" iA
 \\frac{$1}{$2}$0
 endsnippet
-	
 
 snippet vc "vector" wA
 \\vec
+endsnippet
+
+context "math()"
+snippet fk "mathfrak environment" wA
+\\mathfrak{${1:${VISUAL}}}$0
 endsnippet
 
 snippet cal "mathcal environment" w

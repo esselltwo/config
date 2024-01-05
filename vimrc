@@ -79,6 +79,12 @@ autocmd Filetype tex setlocal shiftwidth=2
 " yaml
 autocmd Filetype yaml setlocal softtabstop=2
 autocmd Filetype yaml setlocal shiftwidth=2
+" html
+autocmd Filetype html setlocal softtabstop=2
+autocmd Filetype html setlocal shiftwidth=2
+" css
+autocmd Filetype css setlocal softtabstop=2
+autocmd Filetype css setlocal shiftwidth=2
 
 " theme
 colorscheme eighties

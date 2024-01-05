@@ -66,7 +66,7 @@ let maplocalleader="\\"
 " general settings
 " set tabstop=2
 set softtabstop=4
-set shiftwidth=4
+set shiftwidth=0
 set expandtab
 
 " .cls are LaTeX files

@@ -89,10 +89,6 @@ autocmd Filetype css setlocal shiftwidth=2
 " theme
 colorscheme eighties
 
-" font and ligatures
-set guifont=Berkeley Mono 10
-set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
-
 " keep hidden buffers open
 set hidden
 

@@ -1,2 +1,3 @@
 cp vimrc $HOME/.vimrc
+cp gvimrc $HOME/.gvimrc
 cp -r my-snippets $HOME/.vim/

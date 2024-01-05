@@ -89,6 +89,9 @@ autocmd Filetype css setlocal shiftwidth=2
 " theme
 colorscheme eighties
 
+" font
+set guifont=Berkeley Mono 10
+
 " keep hidden buffers open
 set hidden
 

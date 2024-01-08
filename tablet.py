@@ -2,7 +2,7 @@
 import subprocess
 import re
 
-desired_output = "HDMI-1"
+desired_output = "DP-2"
 
 def get_stylus_id():
     data = subprocess.run(["xsetwacom", "--list", "devices"], capture_output=True,text=True)

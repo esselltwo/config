@@ -53,6 +53,11 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "/home/cmcs/.vim/my-snippets/ult
 
 call plug#end()
 
+" Change cursor shape in different modes
+let &t_EI = "\033[2 q" " NORMAL  █
+let &t_SI = "\033[5 q" " INSERT  |
+let &t_SR = "\033[3 q" " REPLACE _
+
 " Makes syntax highlighting work for vimtex
 filetype plugin indent on
 syntax on

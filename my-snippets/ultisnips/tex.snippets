@@ -1,8 +1,12 @@
+
+
 # include this code block at the top of a *.snippets file...
 # ----------------------------- #
 global !p
+
 def math():
   return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
 endglobal
 # ----------------------------- #
 # ...then place 'context "math()"' above any snippets you want to expand only in math mode
@@ -72,21 +76,58 @@ snippet // "fraction" iA
 \\frac{$1}{$2}$0
 endsnippet
 
-snippet vc "vector" wA
-\\vec
+# these are for environments frequently used with a single character
+# like mathfrak, mathcal , vector arros, etc
+# there are also tabbed versions for visual stuff
+
+context "math()"
+snippet 'vc' "vector" w
+\\vec{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
-snippet fk "mathfrak environment" wA
+snippet 'vc(.)' "vector auto" wrA
+\\vec{`!p snip.rv = match.group(1)`} 
+endsnippet
+
+context "math()"
+snippet fk "mathfrak environment" w
 \\mathfrak{${1:${VISUAL}}}$0
 endsnippet
 
+context "math()"
+snippet 'fk(.)' "mathfrak environment auto" wrA
+\\mathfrak{`!p snip.rv = match.group(1)`} 
+endsnippet
+
+context "math()"
 snippet cal "mathcal environment" w
 \\mathcal{${1:${VISUAL}}}$0
 endsnippet
 
+context "math()"
+snippet 'cal(.)' "mathcal environment auto" wrA
+\\mathcal{`!p snip.rv = match.group(1)`} 
+endsnippet
+
+context "math()"
+snippet bb "mathbb environment" w
+\\mathbb{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet 'bb(.)' "mathbb environment auto" wrA
+\\mathbb{`!p snip.rv = match.group(1)`} 
+endsnippet
+
+context "math()"
 snippet bar "overline environment" w
 \\overline{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet 'bar(.)' "overline environment auto" wrA
+\\overline{`!p snip.rv = match.group(1)`} 
 endsnippet
 
 snippet ts "tensor product symbol" wA
@@ -102,5 +143,5 @@ snippet dots "lower dots" wA
 endsnippet
 
 snippet cdots "center dots" wA
-\cdots
+\\cdots
 endsnippet

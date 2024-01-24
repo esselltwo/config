@@ -1,4 +1,5 @@
-
+#override other snippets with these custom ones
+priority 1
 
 # include this code block at the top of a *.snippets file...
 # ----------------------------- #
@@ -21,6 +22,22 @@ endsnippet
 # text definition-emphasis
 snippet dem "Definition emphasis" w
 \defemph{${1:${VISUAL}}}$0
+endsnippet
+
+snippet fig "Figure environment" bi
+\begin{figure}[${1:htpb}]
+  ${2:\input{fig/$3}}
+  \caption{${4:${3/.pdf_tex//g}}}
+  \label{fig:${5:${3/.pdf_tex//g}}}
+\end{figure}
+endsnippet
+
+snippet figm "Marginal figure environment" bi
+\begin{marginfigure}
+  ${1:\input{fig/$2}}
+  \caption{${3:${2/.pdf_tex//g}}}
+  \label{fig:${4:${2/.pdf_tex//g}}}
+\end{marginfigure}
 endsnippet
 
 # Aligned equation

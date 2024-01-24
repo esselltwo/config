@@ -72,8 +72,19 @@ snippet sd "subscript" iA
 _{$1}$0
 endsnippet
 
+context "math()"
 snippet // "fraction" iA
-\\frac{$1}{$2}$0
+\\frac{
+  $1
+  }{
+  $2
+}
+$0
+endsnippet
+
+context "math()"
+snippet iff "inline fraction" iA
+{ \\textstyle \\frac{$1}{$2} } $0
 endsnippet
 
 # these are for environments frequently used with a single character
@@ -129,6 +140,9 @@ context "math()"
 snippet 'bar(.)' "overline environment auto" wrA
 \\overline{`!p snip.rv = match.group(1)`} 
 endsnippet
+
+
+#other math things
 
 context "math()"
 snippet ts "tensor product symbol" wA

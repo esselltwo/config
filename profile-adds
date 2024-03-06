@@ -1,0 +1,7 @@
+#these things can be added to .profile
+
+#swap caps and escape
+setxkbmap -option "caps:swapescape"
+
+#correct way to start ssh-agent
+eval "$(ssh-agent)"

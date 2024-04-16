@@ -1,15 +1,17 @@
 #!/bin/bash
 
-state=${BRIGHTNESS_TOGGLE_STATE:-0}
-#either load from an environmental variable, or set to 0 if
-#it hasn't been defined yet
+STATE_LOCATION="$HOME/.local/state/brightness_toggle/state"
+if [ ! -f $STATE_LOCATION ]; then
+    echo 0 > $STATE_LOCATION
+fi
+state=$(cat "$STATE_LOCATION")
 
 if (($state==0)); then
     light -S 100
     echo 0 > /sys/class/leds/tpacpi\:\:kbd_backlight/brightness
-    export BRIGHTNESS_TOGGLE_STATE="1" 
+    echo 1 > $STATE_LOCATION
 elif (($state==1)); then
     light -S 50
     echo 2 > /sys/class/leds/tpacpi\:\:kbd_backlight/brightness
-    export BRIGHTNESS_TOGGLE_STATE="0" 
+    echo 0 > $STATE_LOCATION
 fi

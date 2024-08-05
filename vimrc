@@ -39,6 +39,8 @@ Plug 'lithammer/vim-eighties' " colorscheme
 
 Plug 'JuliaEditorSupport/julia-vim' " Julia support
 
+Plug 'kaarmu/typst.vim' " typst support
+
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

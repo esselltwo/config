@@ -13,6 +13,10 @@ endglobal
 # ...then place 'context "math()"' above any snippets you want to expand only in math mode
 # see https://ejmastnak.github.io/tutorials/vim-latex/ultisnips.html#subjective-practical-tips-for-fast-editing
 
+# expl3 commands
+snippet nc "NewDocumentCommand" w
+\NewDocumentCommand{${1:cmd}}{${2:args}}{${3:def}}
+endsnippet
 
 # text emphasis
 snippet em "Emphasis" w

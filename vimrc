@@ -60,6 +60,9 @@ let &t_EI = "\033[2 q" " NORMAL  █
 let &t_SI = "\033[5 q" " INSERT  |
 let &t_SR = "\033[3 q" " REPLACE _
 
+" Mouse in terminal
+set mouse=nv
+
 " Makes syntax highlighting work for vimtex
 filetype plugin indent on
 syntax on
@@ -93,9 +96,6 @@ autocmd Filetype html setlocal shiftwidth=2
 autocmd Filetype css setlocal softtabstop=2
 autocmd Filetype css setlocal shiftwidth=2
 
-" theme
-colorscheme eighties
-
 " keep hidden buffers open
 set hidden
 
@@ -110,3 +110,7 @@ set showcmd
 
 set cmdheight=2
 set number
+
+" theme
+colorscheme eighties
+

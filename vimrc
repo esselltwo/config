@@ -31,10 +31,6 @@ let g:vimtex_quickfix_ignore_filters = [
 
 Plug 'tpope/vim-fugitive' " git integration
 
-Plug 'tpope/vim-surround' " parenthesizing
-
-Plug 'ludovicchabant/vim-gutentags' " tag management
-
 Plug 'lithammer/vim-eighties' " colorscheme
 
 Plug 'JuliaEditorSupport/julia-vim' " Julia support

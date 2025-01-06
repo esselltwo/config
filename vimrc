@@ -6,6 +6,8 @@ set spell
 " Plugins go here
 call plug#begin('~/.vim/plugged') " Plugin directory 
 
+Plug 'dense-analysis/ale' "LSP and linter
+
 Plug 'lervag/vimtex' " General latex plugin
 
 "default tex flavor

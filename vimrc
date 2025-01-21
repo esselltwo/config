@@ -6,7 +6,14 @@ set spell
 " Plugins go here
 call plug#begin('~/.vim/plugged') " Plugin directory 
 
-Plug 'dense-analysis/ale' "LSP and linter
+" Plug 'dense-analysis/ale' "LSP and linter
+
+Plug 'ctrlpvim/ctrlp.vim' "file finder
+
+let g:ctrlp_map = '<c-s-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+noremap <c-p> :CtrlPBuffer<CR>
 
 Plug 'lervag/vimtex' " General latex plugin
 

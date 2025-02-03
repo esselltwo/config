@@ -1,8 +1,15 @@
 # from jskherman on github
 
+#global !p
+#def math():
+#	return vim.eval('typst#in_math()')
+#endglobal
+
 global !p
 def math():
-	return vim.eval('typst#in_math()')
+	name = vim.eval("synIDattr(synID(line('.'), col('.')-1, 0), 'name')")
+	patterns = ["typstMarkupDollar","typstMathScripts","typstMathNumber","typstMathSymbol","typstMathIdentifier","typstMathFunction"]
+	return name in patterns
 endglobal
 
 snippet pac "Package" b

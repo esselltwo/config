@@ -71,6 +71,27 @@ $
 $0
 endsnippet
 
+# === Specific to lecture notes ===
+snippet page "Pagebreak" b
+
+#pagebreak()
+
+endsnippet
+
+snippet sidebar "Sidebar environment" b
+#sidebar[
+  ${1:${VISUAL}}
+]
+$0
+endsnippet
+
+snippet thm "Theorem environment" b
+#thm(name: "${1:Theorem}")[
+  ${2:${VISUAL}}
+]
+$0
+endsnippet
+
 # ==== MATH snippets ====
 
 context "math()"

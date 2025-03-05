@@ -112,7 +112,7 @@ set showcmd
 
 " ignore some files when opening
 " most of these are TeX-related
-set wildignore=*.aux,*.bbl,*.bbl-SAVE-ERROR,*.bcf,*.bcf-SAVE-ERROR,*.blg,*.fdb_latexmk,*.fls,*.log,*.out,*.pdf,*.run.xml,*.synctex.gz
+set wildignore=*.aux,*.bbl,*.bbl-SAVE-ERROR,*.bcf,*.bcf-SAVE-ERROR,*.blg,*.fdb_latexmk,*.fls,*.log,*.out,*.pdf,*.run.xml,*.synctex.gz,*.toc
 
 " highlight searches
 " set hlsearch

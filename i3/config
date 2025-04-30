@@ -50,6 +50,9 @@ bindsym $mod+shift+w exec rofi -lines 12 -padding 18 -width 60 -location 0 -show
 # open a thunar window
 bindsym $mod+t exec thunar
 
+# edit clipboard in a gvim window
+bindsym $mod+c exec ~/.config/i3/textbox.sh
+
 # todo list
 bindsym $mod+Shift+t exec ~/.config/i3/todofi.sh
 

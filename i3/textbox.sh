@@ -3,6 +3,7 @@
 # from https://superuser.com/a/1177176
 
 # Dependencies: xclip, gvim
+# also i3-msg
 
 # Create an "ephemeral" file, that disappears with this process
 tmpfile=$(mktemp /tmp/vim-edit-clipboard.XXXXXX)
@@ -15,6 +16,6 @@ ephemeral_path=/proc/$$/fd/3
 # Paste to the file
 xclip -selection clipboard -o > $ephemeral_path
 # Edit it. Make Vim respect the presence or lack of EOL at EOF
-gvim --nofork -c 'set nofixeol' $ephemeral_path
+gvim --class floating --nofork -c 'set nofixeol' $ephemeral_path
 # Then copy it to the clipboard, removing the newline at the end
 xclip -selection clipboard < $ephemeral_path

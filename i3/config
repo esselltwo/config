@@ -50,6 +50,8 @@ bindsym $mod+shift+w exec rofi -lines 12 -padding 18 -width 60 -location 0 -show
 # open a thunar window
 bindsym $mod+t exec thunar
 
+# windows with class "floating" should float (see https://unix.stackexchange.com/a/730313)
+for_window [class="floating"] floating enable
 # edit clipboard in a gvim window
 bindsym $mod+c exec ~/.config/i3/textbox.sh
 
@@ -167,10 +169,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt

@@ -29,6 +29,10 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# windows with class "floating" should float (see https://unix.stackexchange.com/a/730313)
+for_window [class="floating"] floating enable
+for_window [class="floating"] resize set 640 480
+
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec kitty
@@ -51,8 +55,6 @@ bindsym $mod+shift+w exec rofi -lines 12 -padding 18 -width 60 -location 0 -show
 # open a thunar window
 bindsym $mod+t exec thunar
 
-# windows with class "floating" should float (see https://unix.stackexchange.com/a/730313)
-for_window [class="floating"] floating enable
 # edit clipboard in a gvim window
 bindsym $mod+c exec ~/.config/i3/textbox.sh
 

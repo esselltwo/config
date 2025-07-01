@@ -161,6 +161,11 @@ snippet 'bar(.)' "overline environment auto" wrA
 \\overline{`!p snip.rv = match.group(1)`}
 endsnippet
 
+context "math()"
+snippet oper "operatorn name" w
+\\operatorname{${1:${VISUAL}}}$0
+endsnippet
+
 
 #other math things
 

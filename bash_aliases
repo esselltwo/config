@@ -1,0 +1,1 @@
+alias eo='exo-open'

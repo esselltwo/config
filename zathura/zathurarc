@@ -1,3 +1,5 @@
 set synctex true
-set synctex-editor-command "gvim +%{line} %{input}"
+set synctex-editor-command "vim +%{line} %{input}"
 set sandbox none
+
+set default-bg "#FFFFFF"

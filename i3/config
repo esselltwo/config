@@ -41,35 +41,23 @@ gaps inner 12
 smart_gaps on
 
 # colors
-set $blue #30a4ff
-set $accent #914e0f
-set $light #ffffff
-set $dark #111111
-
 set $text_light #ffffff
 set $text_dark #888888
 
-set $focus_border #4c7899
-set $focus_header #285577
-set $focus_indicator #2e9ef4
-
-set $inact_border #333333
-set $inact_header #5f676a
-set $inact_indicator #484e50
-
-set $unfoc_header #222222
-set $unfoc_indicator #292d2e
-
+set $focus #4c7899
+# purple to try?
+# set $focus #a165bf
+set $inact #5f676a
+set $unfoc #222222
 set $alert #900000
-set $alert_border #2f343a
 
 # colour of border, background, text, indicator, and child_border
-# class                 border         backgr.      text        indicator        child_border
-client.focused          $focus_border $focus_header $text_light $focus_indicator $focus_header
-client.focused_inactive $inact_border $inact_header $text_light $inact_indicator $inact_header
-client.unfocused        $inact_border $unfoc_header $text_dark  $unfoc_indicator $unfoc_header
-client.urgent           $alert_border $alert        $text_light $alert           $alert
-client.placeholder      #000000       #0c0c0c       $text_light #000000          #0c0c0c
+# class                 border  backgr. text        indicator child_border
+client.focused          $focus  $focus  $text_light $focus    $focus
+client.focused_inactive $inact  $inact  $text_light $inact    $inact
+client.unfocused        $unfoc  $unfoc  $text_dark  $unfoc    $unfoc
+client.urgent           $alert  $alert  $text_light $alert    $alert
+client.placeholder      #000000 #0c0c0c $text_light #000000   #0c0c0c
 
 client.background       #ffffff
 

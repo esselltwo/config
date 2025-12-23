@@ -40,26 +40,7 @@ hide_edge_borders smart
 gaps inner 12
 smart_gaps on
 
-# colors
-set $text_light #ffffff
-set $text_dark #888888
-
-set $focus #4c7899
-# purple to try?
-# set $focus #a165bf
-set $inact #5f676a
-set $unfoc #222222
-set $alert #900000
-
-# colour of border, background, text, indicator, and child_border
-# class                 border  backgr. text        indicator child_border
-client.focused          $focus  $focus  $text_light $focus    $focus
-client.focused_inactive $inact  $inact  $text_light $inact    $inact
-client.unfocused        $unfoc  $unfoc  $text_dark  $unfoc    $unfoc
-client.urgent           $alert  $alert  $text_light $alert    $alert
-client.placeholder      #000000 #0c0c0c $text_light #000000   #0c0c0c
-
-client.background       #ffffff
+include colors.conf
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal

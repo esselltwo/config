@@ -5,3 +5,7 @@ if has("gui_gtk")
 endif
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 
+" remove gui from gvim windows
+set guioptions -=m
+set guioptions -=T
+set guioptions -=r

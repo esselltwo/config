@@ -164,15 +164,13 @@ label-connected = %{A1:nm-connection-editor:}%essid%%{A}
 
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = 󰖪 disconnected
+label-disconnected = 󰤮 disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 󰖩
-; ramp-signal-0 = 
-; ramp-signal-1 = 
-; ramp-signal-2 = 
-; ramp-signal-3 = 
-; ramp-signal-4 = 
+ramp-signal-0 = 󰤟
+ramp-signal-1 = 󰤟
+ramp-signal-2 = 󰤥
+ramp-signal-3 = 󰤨
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/date]
@@ -258,13 +256,15 @@ format-charging-underline = #ffb52a
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
@@ -305,9 +305,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]

@@ -58,7 +58,7 @@ font-2 = "Symbols Nerd Font Mono:size=10"
 
 modules-left = i3
 modules-center = xwindow
-modules-right = backlight-acpi pulseaudio wlan bat0 bat1 date powermenu
+modules-right = system-bluetooth-bluetoothctl pulseaudio wlan bat0 bat1 date 
 
 tray-position = right
 tray-padding = 2
@@ -80,7 +80,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-; label = %title:0:30:...%
+label = %title:0:50:...%
 
 [module/filesystem]
 type = internal/fs
@@ -244,6 +244,13 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/system-bluetooth-bluetoothctl]
+type = custom/script
+exec = ~/.config/polybar/scripts/system-bluetooth-bluetoothctl.sh
+tail = true
+click-left = exec blueman-manager
+; click-left = scripts/system-bluetooth-bluetoothctl.sh --toggle &
 
 [module/battery]
 type = internal/battery

@@ -16,15 +16,7 @@
 ;
 ;==========================================================
 
-[colors]
-;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #a165bf
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+include-file = ~/.config/polybar/colors.ini
 
 [bar/bar1]
 monitor = ${env:MONITOR}
@@ -194,10 +186,6 @@ format-volume = <ramp-volume> <label-volume> <bar-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-ramp-volume-0 = 󰕿
-ramp-volume-1 = 󰖀
-ramp-volume-2 = 󰕾
-
 label-muted = 󰸈 muted
 label-muted-foreground = #666
 
@@ -231,11 +219,11 @@ click-left = exec blueman-manager
 
 [module/battery]
 type = internal/battery
-adapter = ac
+adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.primary}
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -269,11 +257,11 @@ animation-discharging-framerate = 750
 
 [module/bat0]
 inherit = module/battery
-battery = bat0
+battery = BAT0
 
 [module/bat1]
 inherit = module/battery
-battery = bat1
+battery = BAT1
 
 [module/temperature]
 type = internal/temperature
@@ -330,7 +318,7 @@ menu-3-0-exec = menu-open-0
 menu-3-1 = lock
 menu-3-1-exec = dm-tool lock
 
-;currently broken!
+;Currently broken!
 [module/battery-combined-udev]
 type = custom/script
 exec = ~/polybar-scripts/battery-combined-udev.sh

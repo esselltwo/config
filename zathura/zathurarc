@@ -2,4 +2,10 @@ set synctex true
 set synctex-editor-command "vim +%{line} %{input}"
 set sandbox none
 
-set default-bg "#FFFFFF"
+set default-bg "#2D2D2D"
+
+set recolor "true"
+set recolor-lightcolor "#2D2D2D" #00
+set recolor-darkcolor "#E0E0E0" #06
+set recolor-reverse-video "true"
+set recolor-keephue "true"

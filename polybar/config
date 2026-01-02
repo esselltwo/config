@@ -223,10 +223,10 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.primary}
+format-charging-underline = ${colors.charging}
 
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = ${colors.discharging}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}

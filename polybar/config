@@ -222,11 +222,17 @@ type = internal/battery
 adapter = AC
 full-at = 98
 
+low-at = 5
+
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.charging}
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${colors.discharging}
+
+format-low = <animation-low> <label-low>
+format-low-background = ${colors.alert}
+format-low-padding = 1
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
@@ -254,6 +260,10 @@ animation-discharging-1 = 
 animation-discharging-0 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
+
+animation-low-0 = "!"
+animation-low-1 = " " 
+animation-low-framerate = 750
 
 [module/bat0]
 inherit = module/battery

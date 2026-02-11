@@ -73,9 +73,7 @@ endsnippet
 
 # === Specific to lecture notes ===
 snippet page "Pagebreak" b
-
 #pagebreak()
-
 endsnippet
 
 snippet sidebar "Sidebar environment" b
@@ -92,6 +90,13 @@ snippet thm "Theorem environment" b
 $0
 endsnippet
 
+snippet def "Definition environment" b
+#thm(name: "${1:Definition}")[
+  ${2:${VISUAL}}
+]
+$0
+endsnippet
+
 # ==== MATH snippets ====
 
 context "math()"
@@ -103,10 +108,10 @@ snippet / "Fraction" i
 (${VISUAL})/($1)$0
 endsnippet
 
-context "math()"
-snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
-(`!p snip.rv = match.group(1)`)/$1$0
-endsnippet
+#context "math()"
+#snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
+#(`!p snip.rv = match.group(1)`)/$1$0
+#endsnippet
 
 # priority 1000
 # context "math()"
@@ -124,10 +129,10 @@ endsnippet
 # `$1$0
 # endsnippet
 
-context "math()"
-snippet '([A-Za-z])(\d)' "auto subscript" wrA
-`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
-endsnippet
+#context "math()"
+#snippet '([A-Za-z])(\d)' "auto subscript" wrA
+#`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+#endsnippet
 
 context "math()"
 snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
@@ -239,20 +244,20 @@ snippet part "d/dx" w
 (diff ${1})/(diff ${2:x}) $0
 endsnippet
 
-context "math()"
-snippet sq "sqrt()" iA
-sqrt(${1:${VISUAL}}) $0
-endsnippet
+#context "math()"
+#snippet sq "sqrt()" iA
+#sqrt(${1:${VISUAL}}) $0
+#endsnippet
 
-context "math()"
-snippet sr "^2" iA
-^2
-endsnippet
+#context "math()"
+#snippet sr "^2" iA
+#^2
+#endsnippet
 
-context "math()"
-snippet cb "^3" iA
-^3
-endsnippet
+#context "math()"
+#snippet cb "^3" iA
+#^3
+#endsnippet
 
 context "math()"
 snippet td "to the ... power" iA
@@ -314,20 +319,20 @@ snippet mcal "mathcal" iA
 cal($1)$0
 endsnippet
 
-context "math()"
-snippet nabl "nabla" iA
-nabla 
-endsnippet
+#context "math()"
+#snippet nabl "nabla" iA
+#nabla 
+#endsnippet
 
 context "math()"
 snippet xx "cross product" iA
 times 
 endsnippet
 
-priority 100
-snippet ** "cdot" iA
-dot 
-endsnippet
+#priority 100
+#snippet ** "cdot" iA
+#dot 
+#endsnippet
 
 priority 300
 context "math()"
@@ -335,10 +340,10 @@ snippet dint "integral" wA
 integral_(${1:-infinity})^(${2:infinity}) ${3:${VISUAL}} $0
 endsnippet
 
-context "math()"
-snippet inv "inverse" iA
-^(-1)
-endsnippet
+#context "math()"
+#snippet inv "inverse" iA
+#^(-1)
+#endsnippet
 
 context "math()"
 snippet compl "complement" iA
@@ -360,10 +365,10 @@ snippet '(?<!i)tss' "text subscript" irA
 _("$1") $0
 endsnippet
 
-context "math()"
-snippet tt "text" iA
-"$1"$0
-endsnippet
+#context "math()"
+#snippet tt "text" iA
+#"$1"$0
+#endsnippet
 
 context "math()"
 snippet case "cases" wA

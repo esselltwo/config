@@ -238,11 +238,16 @@ context "math()"
 snippet prod "product" w
 product_(${1:n=${2:1}})^(${3:infinity}) ${4:${VISUAL}} $0
 endsnippet
- 
+
 context "math()"
-snippet part "d/dx" w
-(diff ${1})/(diff ${2:x}) $0
+snippet par "partial derivative" w
+(partial ${1})/(partial ${2}) $0
 endsnippet
+ 
+#context "math()"
+#snippet part "d/dx" w
+#(diff ${1})/(diff ${2:x}) $0
+#endsnippet
 
 #context "math()"
 #snippet sq "sqrt()" iA

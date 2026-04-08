@@ -3,6 +3,7 @@ return {
   ft = "typst",
   version = '1.*',
   opts = {
+    open_cmd = 'firefox %s --new-window -P typst-preview --class typst-preview'
   }, -- lazy.nvim will implicitly calls `setup {}`
   keys = {
     { "<leader>l", "<cmd>TypstPreviewToggle<CR>", desc = "Toggle preview on/off" },

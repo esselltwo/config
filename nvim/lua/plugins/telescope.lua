@@ -6,7 +6,11 @@ return {
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
     config = function()
-        require("telescope").setup()
+        require("telescope").setup{
+            defaults = {
+                file_ignore_patterns = { "%.pdf" }
+            },
+        }
     end,
     keys = function()
         local builtin = require("telescope.builtin")

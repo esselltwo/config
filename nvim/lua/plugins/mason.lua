@@ -4,6 +4,7 @@ return {
         
         ensure_installed = {
             "tinymist",
+            "texlab",
         },
     },
 }

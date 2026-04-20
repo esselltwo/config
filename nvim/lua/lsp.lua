@@ -15,6 +15,22 @@ vim.lsp.config["tinymist"] = {
 
 vim.lsp.enable("tinymist")
 
+vim.lsp.config["texlab"] = {
+
+    cmd = { "texlab" },
+
+    filetypes = { "tex" },
+
+    settings = {
+        texlab = {
+            latexFormatter = "tex-fmt",
+        }
+    }
+
+}
+
+vim.lsp.enable("texlab")
+
 vim.keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format({async = false})
 end)

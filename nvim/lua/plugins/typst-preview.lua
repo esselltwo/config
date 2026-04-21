@@ -21,7 +21,7 @@ return {
             local m = require("typst_math")
 
             function _G.typst_in_math()
-                return m.in_math()
+              return m.in_math()
             end
         end,
     }

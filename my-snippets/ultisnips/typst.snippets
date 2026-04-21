@@ -1,15 +1,10 @@
-# from jskherman on github
-
-#global !p
-#def math():
-#	return vim.eval('typst#in_math()')
-#endglobal
-
 global !p
 def math():
-	name = vim.eval("synIDattr(synID(line('.'), col('.')-1, 0), 'name')")
-	patterns = ["typstMarkupDollar","typstMathScripts","typstMathNumber","typstMathSymbol","typstMathIdentifier","typstMathFunction"]
-	return name in patterns
+    try:
+        # Call the Lua global function
+        return vim.eval("v:lua.typst_in_math()")
+    except Exception:
+        return False
 endglobal
 
 snippet pac "Package" b
@@ -129,10 +124,10 @@ endsnippet
 # `$1$0
 # endsnippet
 
-#context "math()"
-#snippet '([A-Za-z])(\d)' "auto subscript" wrA
-#`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
-#endsnippet
+context "math()"
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_(`!p snip.rv = match.group(2)`)
+endsnippet
 
 context "math()"
 snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA

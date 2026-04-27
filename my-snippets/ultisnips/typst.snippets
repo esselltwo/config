@@ -1,6 +1,8 @@
 global !p
 def math():
-    return vim.eval("v:lua.typst_in_math()")
+    return True
+    # this is not working right so turn it off
+    #return vim.eval("v:lua.typst_in_math()")
 endglobal
 
 context math()
@@ -72,7 +74,7 @@ snippet page "Pagebreak" b
 #pagebreak()
 endsnippet
 
-snippet sidebar "Sidebar environment" b
+snippet side "Sidebar environment" b
 #sidebar[
   ${1:${VISUAL}}
 ]

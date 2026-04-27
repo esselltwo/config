@@ -44,12 +44,25 @@ snippet figm "Marginal figure environment" bi
 \end{marginfigure}
 endsnippet
 
+snippet begin "General environment" b
+\begin{${1:env}}
+  ${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet eq "Equation environment, numbered" b
+\begin{equation}
+  ${0:${VISUAL}}
+\end{equation}
+endsnippet
+
 # Aligned equation
 snippet al "Aligned equation environment, unnumbered" b
 \begin{align*}
   ${0:${VISUAL}}
 \end{align*}
 endsnippet
+
 
 # Arrays
 snippet ar "Array environment" b

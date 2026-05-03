@@ -1,6 +1,9 @@
 -- font
 vim.o.guifont = "Berkeley Mono:h11"
 
+-- always show diagnostic column to avoid jumping
+vim.opt.signcolumn = "yes"
+
 -- tab stops
 vim.opt.hlsearch=false
 vim.opt.tabstop=4

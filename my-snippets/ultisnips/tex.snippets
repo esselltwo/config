@@ -164,6 +164,13 @@ snippet bb "mathbb environment" w
 \\mathbb{${1:${VISUAL}}}$0
 endsnippet
 
+priority 2
+context "math()"
+snippet 'bbk' "mathbb environment auto" wrA
+\Bbbk
+endsnippet
+priority 1
+
 context "math()"
 snippet 'bb(.)' "mathbb environment auto" wrA
 \\mathbb{`!p snip.rv = match.group(1)`}
@@ -205,4 +212,30 @@ endsnippet
 context "math()"
 snippet cdots "center dots" wA
 \\cdots
+endsnippet
+
+context "math()"
+snippet xar "labeled arrow" wA
+\\xrightarrow{${1:${VISUAL}}}$0
+endsnippet
+
+#experimental greek letters
+context "math()"
+snippet 'a "alpha" iA
+\\alph
+endsnippet
+
+context "math()"
+snippet 'b "beta" iA
+\\beta
+endsnippet
+
+context "math()"
+snippet 'z "zeta" iA
+\\zeta
+endsnippet
+
+context "math()"
+snippet 'w "omega" iA
+\\omega
 endsnippet

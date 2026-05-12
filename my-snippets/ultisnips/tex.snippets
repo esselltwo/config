@@ -63,6 +63,24 @@ snippet al "Aligned equation environment, unnumbered" b
 \end{align*}
 endsnippet
 
+# lists
+snippet desc "Description list" b
+\begin{description}
+  \item[${1:${VISUAL}}] $0
+\end{description}
+endsnippet
+
+snippet item "Itemized list" b
+\begin{itemize}
+  \item $0
+\end{itemize}
+endsnippet
+
+snippet enum "Enumerated list" b
+\begin{enumerate}
+  \item $0
+\end{enumerate}
+endsnippet
 
 # Arrays
 snippet ar "Array environment" b
@@ -132,6 +150,16 @@ endsnippet
 context "math()"
 snippet 'vc(.)' "vector auto" wrA
 \\vec{`!p snip.rv = match.group(1)`}
+endsnippet
+
+context "math()"
+snippet hat "widehat" w
+\\widehat{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet tild "widetilde" w
+\\widetilde{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"

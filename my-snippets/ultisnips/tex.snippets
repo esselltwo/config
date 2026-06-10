@@ -188,6 +188,16 @@ snippet 'cal(.)' "mathcal environment auto" wrA
 endsnippet
 
 context "math()"
+snippet scr "mathscr environment" w
+\\mathscr{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet 'scr(.)' "mathscr environment auto" wrA
+\\mathscr{`!p snip.rv = match.group(1)`}
+endsnippet
+
+context "math()"
 snippet bb "mathbb environment" w
 \\mathbb{${1:${VISUAL}}}$0
 endsnippet

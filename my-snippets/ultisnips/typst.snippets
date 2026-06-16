@@ -1,11 +1,14 @@
 global !p
 def math():
-    return vim.eval("v:lua.typst_in_math()") == "1"
+    # Thank you to a deleted reddit user for this function
+	# https://www.reddit.com/r/vim/comments/1f3q612/detect_syntax_region_under_cursor_for_custom/ll7hlub/
+    name = vim.eval("synIDattr(synID(line('.'), col('.')-1, 0), 'name')")
+    patterns = ["typstMarkupDollar","typstMathScripts","typstMathNumber","typstMathSymbol","typstMathIdentifier","typstMathFunction"]
+    return name in patterns
 endglobal
 
-context math()
-snippet mm
-OK
+snippet mm "Debug math() result" b
+`!p snip.rv = "math() = " + str(math())`
 endsnippet
 
 snippet pac "Package" b

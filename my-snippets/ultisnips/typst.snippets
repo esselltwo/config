@@ -1,8 +1,6 @@
 global !p
 def math():
-    return True
-    # this is not working right so turn it off
-    #return vim.eval("v:lua.typst_in_math()")
+    return vim.eval("v:lua.typst_in_math()") == "1"
 endglobal
 
 context math()

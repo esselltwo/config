@@ -20,9 +20,18 @@ return {
         config = function()
             local m = require("typst_math")
 
-            function _G.typst_in_math()
+            _G.typst_in_math = function()
                 return m.in_math()
             end
+
+            vim.api.nvim_create_user_command("TypstInMath", function()
+                local is_math = m.in_math()
+                vim.notify(is_math and "true" or "false", vim.log.levels.INFO, {
+                    title = "Typst math",
+                })
+            end, {
+                desc = "Report whether the cursor is inside Typst math mode",
+            })
         end,
     }
 }

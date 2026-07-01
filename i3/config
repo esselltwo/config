@@ -67,6 +67,9 @@ bindsym $mod+t exec thunar
 # edit clipboard in a gvim window
 bindsym $mod+c exec ~/.config/i3/textbox.sh
 
+# utility scripts menu
+bindsym $mod+u exec --no-startup-id ~/my-config/util-scripts/rofi-menu.sh
+
 # todo list
 bindsym $mod+Shift+t exec ~/.config/i3/todofi.sh
 
@@ -210,4 +213,3 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id "~/.config/i3/launch_polybar.sh"
 
 #exec --no-startup-id xfce4-panel --disable-wm-check
-

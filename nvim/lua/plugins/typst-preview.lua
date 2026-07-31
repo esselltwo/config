@@ -4,7 +4,7 @@ return {
         ft = "typst",
         version = '1.*',
         opts = {
-            open_cmd = 'firefox %s --new-window -P typst-preview --class typst-preview'
+            open_cmd = 'firefox %s --new-window -P typst-preview --class typst-preview',
             follow_cursor = false,
         }, -- lazy.nvim will implicitly calls `setup {}`
         keys = {

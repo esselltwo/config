@@ -1,8 +1,20 @@
 #!/usr/bin/python
 import subprocess
 import re
+import socket
 
-desired_output = "HDMI-1"
+outputs_by_hostname = {
+    "tree": "HDMI-1",
+    "sl2-laptop": "HDMI-2",
+}
+
+
+def get_desired_output():
+    hostname = socket.gethostname()
+    try:
+        return outputs_by_hostname[hostname]
+    except KeyError:
+        raise RuntimeError(f"No tablet output configured for hostname: {hostname}")
 
 def get_stylus_id():
     data = subprocess.run(["xsetwacom", "--list", "devices"], capture_output=True,text=True)
@@ -17,4 +29,4 @@ def get_stylus_id():
     return ids[0]
 
 if __name__ == "__main__":
-    subprocess.run(["xsetwacom", "--set", get_stylus_id(), "MapToOutput", desired_output])
+    subprocess.run(["xsetwacom", "--set", get_stylus_id(), "MapToOutput", get_desired_output()])

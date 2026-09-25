@@ -15,6 +15,8 @@ vim.lsp.config["tinymist"] = {
 
 vim.lsp.enable("tinymist")
 
+-- vim.env.LATEXINDENT_CONFIG = vim.fn.stdpath("config") .. "/latexindent/indentconfig.yaml"
+
 vim.lsp.config["texlab"] = {
 
     cmd = { "texlab" },
@@ -23,7 +25,11 @@ vim.lsp.config["texlab"] = {
 
     settings = {
         texlab = {
-            latexFormatter = "tex-fmt",
+            latexFormatter = "latexindent",
+            latexindent = {
+                global = true,
+                modifyLineBreaks = true,
+            },
         }
     }
 
@@ -32,5 +38,5 @@ vim.lsp.config["texlab"] = {
 vim.lsp.enable("texlab")
 
 vim.keymap.set("n", "<leader>f", function()
-    vim.lsp.buf.format({async = false})
+    vim.lsp.buf.format({async = false, timeout_ms = 10000})
 end)

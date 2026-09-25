@@ -21,3 +21,6 @@ This is detailed (here)[https://github.com/stark/siji/issues/28].
 ## Shells
 This is set up to use ``fish`` in ``kitty`` and assumes it was installed by ``brew``.
 If not adjust ``kitty.conf`` to the right path.
+
+## latexindent
+Put the `latexindent` directory in `~/.config` and then the `nvim` config should find it correctly.
